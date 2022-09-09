@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  min-width: 320px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+/*glob */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 1200px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.main__title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.main__caption_timer {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.main__block_timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__btn_timer {
+  background-color: blue;
+  border-radius: 10px;
+  color: beige;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  transition: background-color .2s ease-in-out, outline .2s ease-in-out;
+}
+
+.main__btn_timer:focus-visible {
+  outline: 0;
+  outline: 2px solid blue;
+  outline-offset: 5px;
+}
+
+.main__btn_timer:hover:not(:focus-visible) {
+  background-color: rgb(101, 101, 216);
+}
+
+.main__btn_timer:active:not(:focus-visible) {
+  background-color: rgb(8, 8, 99);
+}
+
+.main__timer {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: blue;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: firebrick;
+  color: transparent;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.card.open {
+  background-color: blue;
+  color: beige;
+}
+
+.card.success {
+  background-color: green;
+  color: beige;
+  transform: scale(0.95);
+}
